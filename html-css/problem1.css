@@ -1,0 +1,162 @@
+body{
+	margin: 0;
+}
+header{
+	width: 100%;
+	height: 7%;
+}
+section{
+	width: 100%;
+	height: 93%;
+	background-color: #CCCCB2;
+}
+[type=radio]{
+	display: none;
+}
+[type=radio]:checked ~ label{
+	background-color: gray;
+	z-index: 1;
+}
+[type=radio]:checked ~ label ~ .content{
+	z-index: 2;
+}
+label{	
+	background-color: white;
+	border-left: 1px solid gray;
+	display: inline-block;
+	float: left;
+	padding: 14px;
+}
+label[for=tab3]{
+	border-right: 1px solid gray;
+}
+.content{
+	border: 1px solid #0033ff;
+	width:1250px;
+	height: 550px;
+	position: absolute;
+	top: 70px;
+	left: 20px;
+	background-color: white;
+	border-radius: 5px;
+}
+header div,header div div{
+	height: 100%;
+	display: inline;
+	float: left;
+}
+#logo{
+	width: 20%;
+}
+#tabs{
+	width: 70%;
+	border-right: 1px solid gray;
+}
+#menu1{
+	widows: 20%;
+}
+#menu1 span{
+	padding: 10px;
+	position: absolute;
+	top: 5px;
+}
+#top{
+	height: 4%;
+	width: 98%;
+	background-color: #99CCFF;
+	border-bottom: 1px solid #0033ff;
+	padding: 1%;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;		
+}
+#middle{
+	height: 9%;
+	width: 98%;
+	background-color: #99CCFF;
+	border-bottom: 1px solid #0033ff;
+	padding: 1%;
+}
+#bottom{
+	width: 100%;
+	height: 77.5%;
+	background-color: #f0f0f0;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#toleft{
+	width: 20%;
+	height: 100%;
+	background-color: #f0f0f0;
+	border-bottom-left-radius: 5px;
+}
+#toright{
+	width: 80%;
+	height: 100%;
+	background-color: white;
+	border-bottom-left-radius: 5px;
+}
+#tab2_1{
+width: 45%;
+height: 80%;
+background-color: white;
+margin: 10px;
+}
+#tab2_2{
+	width: 45%;
+	height: 35%;
+	background-color: white;
+	margin: 10px;
+	border:1px solid gray;
+}
+#tab2_3{
+	width: 45%;
+	height: 30%;
+	background-color: white;
+	margin: 10px;
+	border:1px solid gray;
+}
+#toright table{
+	border: 1px solid gray;
+	border-radius: 10px;
+	padding: 10px;
+	border-collapse: collapse;
+	margin: auto;
+	margin-top: 20px;
+}
+#toright td,#toright th{
+	border:1px solid gray;
+	padding: 10px;
+}
+#toright th{
+	background-color: #0033ff;
+	color: white;
+	text-align: left;
+}
+#toright .one{
+	background-color: yellow;
+}
+#toright .two{
+	background-color: pink;
+}
+#toright .one:hover,#toright .two:hover{
+	background-color: red;
+}
+#top span,form{
+	display: inline;
+	color: blue;
+}
+#middle input{
+	width:600px;
+	padding: 3px;
+	text-align: center;
+}
+#middle span{
+	width:20px;
+	margin: 0px;
+	color: black;
+}
+#middle select{
+	width: 1220;
+	padding: 3px;	
+}
