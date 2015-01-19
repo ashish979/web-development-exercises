@@ -1,0 +1,30 @@
+body{
+	background-color: #f7f7f7;
+}
+select{
+	width: 150px;
+	margin:auto;
+}
+div{
+	margin: auto;
+	background-color: white;
+	border: 1px solid gray;
+	width: 450px;
+	padding: 20px;
+}
+#addButton{
+	background-color: red;
+	color: white;
+	border-color: black;
+	position: relative;
+	top: -45px;
+	left: 35px;
+}
+#removeButton{
+	background-color: red;
+	color: white;
+	border-color: black;
+	position: relative;
+	top: -10px;
+	left: -20px;
+}
