@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Javascript-2</title>
+		<link rel="stylesheet" type="text/css" href="javascript-2.css">
+		<script type="text/javascript" src="javascript-2.js"></script>
+	</head>
+	<body>
+		<div>			
+			<table id="formTable">
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Actions</th>
+				</tr>
+				<tr id="tr0">
+					<td><input type="text" name="name" id="name0"></td>
+					<td><input type="email" name="email" id="email0"></td>
+					<td><button onclick="save('0');" id="button0">Save</button>
+						<a id="edit0" href="#" onclick="editA('0')">Edit</a>
+						<span id="dash0">/</span>
+						<a id="delete0" href="#" onclick="deleteA('0');">Delete</a>
+					</td>
+				</tr>
+				<tr id="tr1">
+					<td><input type="text" name="name" id="name1"></td>
+					<td><input type="email" name="email" id="email1"></td>
+					<td><button onclick="save('1');" id="button1">Save</button>
+						<a id="edit1" href="#" onclick="editA('1')">Edit</a>
+						<span id="dash1">/</span>
+						<a id="delete1" href="#" onclick="deleteA('1');">Delete</a>
+					</td>
+				</tr>
+				<tr id="tr2">
+					<td><input type="text" name="name" id="name2"></td>
+					<td><input type="email" name="email" id="email2"></td>
+					<td><button onclick="save('2');" id="button2">Save</button>
+						<a id="edit2" href="#" onclick="editA('2')">Edit</a>
+						<span id="dash2">/</span>
+						<a id="delete2" href="#" onclick="deleteA('2');">Delete</a>
+					</td>
+				</tr>
+			</table>
+			<button onclick="addRow();" nosubmit style="margin-left:35px;">Add new row</button>
+		</div>
+	</body>
+</html>
