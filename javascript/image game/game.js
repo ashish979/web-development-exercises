@@ -4,18 +4,26 @@ var countTile = 0;
 var clicks = 0;
 var totalSeconds = 0;
 var flag = 0;
+var arrHide = [];
 
-var createFunc = function(i){
+var createAddFunc = function(i){
   document.getElementById("tdid"+i).onclick = function(){unhide(String(i));};
 };
 
 var createRemovefunc = function(i){
-	document.getElementById("tdid"+i).onclick = null;
+	document.getElementById("tdid"+i).setAttribute("onclick", " ");
 };
 
 var addClickEvent = function(){
 	for (var i = 0; i < 36; i++) {
-		createFunc(i);
+		console.log(arrHide);
+		if(arrHide.indexOf(String(i))>=0){
+			console.log("remove "+i);
+			createRemovefunc(i);
+		}
+		else{			
+			createAddFunc(i);	
+		}
 	}
 };
 
@@ -127,18 +135,18 @@ var startGame = function(){
 var unhide = function(divid){
 	divid = String(divid);
 	currId = divid;
-	console.log(divid);
 	clicks++;
 	document.getElementById("clickSpan").innerHTML = clicks;
 	var currDiv = "imgid" + divid;
 	createRemovefunc(currId);	
 	document.getElementById(currDiv).style.visibility = "visible";
-	if(count == 0){
+	if(count === 0){
 		prevDiv = currDiv;
 		prevId = currId;
 		count++;
 	}
-	else if(count == 1){
+	else if(count === 1){
+		removeClickEvent();
 		count = 0;
 		src1 = document.getElementById(currDiv).src;
 		src2 = document.getElementById(prevDiv).src;		
@@ -146,11 +154,13 @@ var unhide = function(divid){
 			setTimeout(function(){
 				document.getElementById(currDiv).style.visibility = "hidden";
 				document.getElementById(prevDiv).style.visibility = "hidden";
-				createFunc(currId);
-				createFunc(prevId);			
+				addClickEvent();			
 			},500);
 		}
 		else{
+			arrHide.push(currId);
+			arrHide.push(prevId);
+			addClickEvent();
 			countTile++;
 			if (countTile == 18) {
 				alert("WoooHooo You Won!!!\n Your Time : "+document.getElementById('minutes').innerHTML+":"+document.getElementById('seconds').innerHTML);
@@ -163,4 +173,4 @@ var unhide = function(divid){
 
 window.onload = function(){
 	initializeImg();
-}
+};
