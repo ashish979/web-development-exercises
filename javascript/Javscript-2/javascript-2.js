@@ -2,7 +2,6 @@ var count = 3;
 var deleteA = function(buttonId){
 	var parent = document.getElementById("formTable");
 	var child = document.getElementById("tr" + buttonId);
-	console.log(child);
 	parent.removeChild(child);
 };
 
@@ -26,7 +25,6 @@ var editA  =  function(buttonId){
 
 var save  =  function(buttonId){
 	var buttonId = String(buttonId);
-	console.log(buttonId);
 	var input1 = document.getElementById("name" + buttonId);
 	var input2 = document.getElementById("email" + buttonId);
 	var input3 = document.getElementById('button' + buttonId);

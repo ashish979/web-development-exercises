@@ -5,20 +5,19 @@ var clicks = 0;
 var totalSeconds = 0;
 var flag = 0;
 var arrHide = [];
+var complete = 0;
 
 var createAddFunc = function(i){
-  document.getElementById("tdid"+i).onclick = function(){unhide(String(i));};
+  document.getElementById("tdid" + i).onclick = function(){unhide(String(i));};
 };
 
 var createRemovefunc = function(i){
-	document.getElementById("tdid"+i).setAttribute("onclick", " ");
+	document.getElementById("tdid" + i).setAttribute("onclick"," ");
 };
 
 var addClickEvent = function(){
 	for (var i = 0; i < 36; i++) {
-		console.log(arrHide);
-		if(arrHide.indexOf(String(i))>=0){
-			console.log("remove "+i);
+		if(arrHide.indexOf(String(i)) >= 0){
 			createRemovefunc(i);
 		}
 		else{			
@@ -37,11 +36,11 @@ var setTime = function(){
 	var minutesLabel = document.getElementById("minutes");
 	var secondsLabel = document.getElementById("seconds");
 	totalSeconds++;
-	secondsLabel.innerHTML = pad(totalSeconds%60);
-	minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
+	secondsLabel.innerHTML = pad(totalSeconds % 60);
+	minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
 };
 
-var pad=function(val){
+var pad = function(val){
 	var valString = val + "";
 	if(valString.length < 2){
 		return "0" + valString;
@@ -60,23 +59,25 @@ var initializeImg = function(){
 	for (var i = 0; i < 36; i++) {
 		ar[i] = i;
 	};
-	ar.sort(function(){return Math.random()-0.5;});
+	ar.sort(function(){return Math.random() - 0.5;});
 	for (var i = 0; i < 36; i++) {
-		if (ar[i]>17) {
-			tmp=ar[i]-18;
+		if (ar[i] > 17) {
+			tmp = ar[i] - 18;
 		}
 		else{
-			tmp=ar[i];
+			tmp = ar[i];
 		}
-		document.getElementsByTagName('img')[i].style.visibility="hidden";
-		document.getElementsByTagName('img')[i].src = "images\\image_"+tmp+".jpg";
+		document.getElementsByTagName('img')[i].style.visibility = "hidden";
+		document.getElementsByTagName('img')[i].src = "images\\image_" + tmp + ".jpg";
 	}
 };
 
 var stopTimer = function(){
-	if (countTile < 18) {
+	if (complete != 1) {
 		alert("You did not complete the game!!Please come again!!");
 	}
+	else
+		complete = 0;
 	document.getElementById('start').style.display = "initial";
 	clearInterval(xInt);
 	document.getElementById("minutes").innerHTML = "00";
@@ -89,13 +90,14 @@ var stopTimer = function(){
 	removeClickEvent();
 	initializeImg();
 	document.getElementById("clickSpan").innerHTML = "0";
+	arrHide = [];
 };
 
 var pauseTimer = function(){
 	if(stop != "yes"){
 		clearInterval(xInt);
 		resButton.innerHTML = "Resume";
-		stop = "yes";	
+		stop = "yes";
 		removeClickEvent();
 	}
 	else{
@@ -107,7 +109,7 @@ var pauseTimer = function(){
 };
 
 var startGame = function(){
-	document.getElementById('start').style.display="none";
+	document.getElementById('start').style.display = "none";
 	initializeImg();	
 	addClickEvent();
 	if(flag != 1){
@@ -133,7 +135,6 @@ var startGame = function(){
 };
 
 var unhide = function(divid){
-	divid = String(divid);
 	currId = divid;
 	clicks++;
 	document.getElementById("clickSpan").innerHTML = clicks;
@@ -163,9 +164,10 @@ var unhide = function(divid){
 			addClickEvent();
 			countTile++;
 			if (countTile == 18) {
-				alert("WoooHooo You Won!!!\n Your Time : "+document.getElementById('minutes').innerHTML+":"+document.getElementById('seconds').innerHTML);
-				stopTimer();
+				alert("WoooHooo You Won!!!\n Your Time : " + document.getElementById('minutes').innerHTML + ":" + document.getElementById('seconds').innerHTML);
 				countTile = 0;
+				complete = 1;
+				stopTimer();
 			}
 		}
 	}
