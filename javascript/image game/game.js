@@ -126,13 +126,16 @@ var startGame = function(){
 
 var unhide = function(divid){
 	divid = String(divid);
+	currId = divid;
 	console.log(divid);
 	clicks++;
 	document.getElementById("clickSpan").innerHTML = clicks;
 	var currDiv = "imgid" + divid;
+	createRemovefunc(currId);	
 	document.getElementById(currDiv).style.visibility = "visible";
 	if(count == 0){
 		prevDiv = currDiv;
+		prevId = currId;
 		count++;
 	}
 	else if(count == 1){
@@ -143,12 +146,14 @@ var unhide = function(divid){
 			setTimeout(function(){
 				document.getElementById(currDiv).style.visibility = "hidden";
 				document.getElementById(prevDiv).style.visibility = "hidden";
+				createFunc(currId);
+				createFunc(prevId);			
 			},500);
 		}
 		else{
 			countTile++;
 			if (countTile == 18) {
-				alert("WoooHooo You Won!!!\n Your Time : "+document.getElementById('minutes')+":"+document.getElementById('seconds'));
+				alert("WoooHooo You Won!!!\n Your Time : "+document.getElementById('minutes').innerHTML+":"+document.getElementById('seconds').innerHTML);
 				stopTimer();
 				countTile = 0;
 			}

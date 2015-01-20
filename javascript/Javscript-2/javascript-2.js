@@ -1,6 +1,9 @@
 var count = 3;
 var deleteA = function(buttonId){
-	document.getElementById("tr" + buttonId).style.display = "none";
+	var parent = document.getElementById("formTable");
+	var child = document.getElementById("tr" + buttonId);
+	console.log(child);
+	parent.removeChild(child);
 };
 
 var editA  =  function(buttonId){
