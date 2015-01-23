@@ -1,0 +1,49 @@
+body{
+	background-color: #f7f7f7;
+}
+.brandContent{
+	width: 300px;
+	background-color: white;
+	height: 500px;
+	padding: 20px;
+	float: left;
+}
+li{
+	padding: 5px;
+}
+.colorContent{
+	width: 200px;
+	height: 500px;
+	float: left;
+	padding: 20px;
+}
+.content{
+	height: 569px;
+	width: 457px;
+	background-color: white;
+	padding: 10px;
+	float: left;
+}
+.yellow,.red,.blue,.green{
+	width: 80px;
+	height: 80px;
+	text-align: center;
+	padding: 15px;
+}
+.yellow{
+	background-color: yellow;
+}
+.red{
+	background-color: red;
+}
+.blue{
+	background-color: blue;
+}
+.green{
+	background-color: green;
+}
+
+td{
+	width: 110px;
+	height: 110px;
+}
