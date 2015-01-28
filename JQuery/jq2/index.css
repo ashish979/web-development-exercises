@@ -1,0 +1,14 @@
+#feedback { 
+	font-size: 1.4em;
+}
+		 
+#selectable0 .ui-selected,#selectable1 .ui-selected,#selectable2 .ui-selected,#selectable3 .ui-selected { 
+	background: blue; color: white;
+}
+
+#selectable0,#selectable1,#selectable2,#selectable3 { 
+	list-style-type: none; margin: 0; padding: 0; width: 60%; 
+}
+#selectable0 li,#selectable1 li,#selectable2 li,#selectable2 l1 { 
+	margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; 
+}

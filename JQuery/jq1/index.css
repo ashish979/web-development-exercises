@@ -1,0 +1,19 @@
+table{
+	border-collapse: collapse;
+	border:1px solid black;
+
+}
+tr,th{
+	border:1px solid black;
+	padding: 5px;
+	text-align: center;
+	display: block;
+}
+td{
+	padding: 5px;
+	vertical-align: bottom;
+	display: block;
+}
+#roles tr{
+	width: 100px;
+}
