@@ -6,30 +6,29 @@
 		<script type="text/javascript" src="script.js"></script>
 		<link rel="stylesheet" type="text/css" href="index.css">
 		<style>
-		  #feedback { font-size: 1.4em; }
-		  #selectable0 .ui-selected,#selectable1 .ui-selected,#selectable2 .ui-selected,#selectable3 .ui-selected
-		   { background: blue; color: white; }
-		  #selectable0,#selectable1,#selectable2,#selectable3 { list-style-type: none; margin: 0; padding: 0; width: 60%; }
-		  #selectable0 li,#selectable1 li,#selectable2 li,#selectable2 l1 { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+		  
 	  	</style>
 	</head>
 	<body>
+		<div id="header">
+			<h2>Product Grid</h2>
+		</div>
 		<div id="menu">
 			<h3>Fruits</h3>
 			<div>
-			<ol id="selectable0">
-			  <li class="items" id="0">Banana</li>
-			  <li class="items" id="1">Orange</li>
-			</ol>
-		<div id="submenu">
-				<h3 id="header1a">Apple<h3>
-				<div>
-					<ol id="selectable1">
-					  <li class="items" id="2">Green Apple</li>
-					  <li class="items" id="3">Red Apple</li>
-					</ol>
-				</div>				
-			</div>
+				<ol id="selectable0">
+				  <li class="items" id="0">Banana</li>
+				  <li class="items" id="1">Orange</li>
+				</ol>
+				<div id="submenu">
+					<h3 id="header1a">Apple</h3>
+					<div>
+						<ol id="selectable1">
+						  <li class="items" id="2">Green Apple</li>
+						  <li class="items" id="3">Red Apple</li>
+						</ol>
+					</div>				
+				</div>
 			</div>
 			<h3 id="header2">Vegetables</h3>
 			<div>
@@ -48,6 +47,11 @@
 				</ol>
 			</div>
 		</div>
-		
+		<div id="aside"></div>
+		<div id="footer">
+			<h2>
+				Footer
+			</h2>
+		</div>
 	</body>
 </html>

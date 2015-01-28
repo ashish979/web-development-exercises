@@ -1,14 +1,66 @@
-#feedback { 
-	font-size: 1.4em;
+body{
+	margin: 0px;
 }
-		 
+h3{
+	width: 200px;
+	height: 30px;
+	font-size: 20px;
+	text-align: center;
+	background-color: #4169E1;
+	margin: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding: 3px;
+	border:1px outset yellow;
+}
 #selectable0 .ui-selected,#selectable1 .ui-selected,#selectable2 .ui-selected,#selectable3 .ui-selected { 
-	background: blue; color: white;
+	background-color: yellow; 
+	color: black;
 }
 
 #selectable0,#selectable1,#selectable2,#selectable3 { 
-	list-style-type: none; margin: 0; padding: 0; width: 60%; 
+	list-style-type: none; 
+	margin: 0px;  
+	margin-right: 0px;
+	margin-left: 0px; 
+	padding: 0px;
+	text-align: center;
 }
-#selectable0 li,#selectable1 li,#selectable2 li,#selectable2 l1 { 
-	margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; 
+#selectable0 li,#selectable1 li,#selectable2 li,#selectable3 li { 
+	background-color: #00BFFF;
+	width: 200px;
+	height: 20px;
+	font-size: 20px;
+	margin: 0px;
+	padding:3px;
+	border:1px outset yellow;
+}
+#selectable0 li:hover,#selectable1 li:hover,#selectable2 li:hover,#selectable3 li:hover { 
+	background-color: yellow;
+}
+h3 div{
+	margin: 0px;
+}
+#header{
+	width: 100%;
+	height: 30px;
+	background-color: green;
+	border:1px outset white;
+}
+#footer{
+	width: 100%;
+	height: 30px;
+	background-color: green;
+	margin: 0px;
+	border:1px outset white;
+}
+#aside{
+	background-color: gray;
+}
+h2{
+	text-align: center;
+	margin: 0px;
+}
+#submenu h3{
+	background-color: #00BFFF;
 }
