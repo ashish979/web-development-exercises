@@ -5,7 +5,7 @@ var sold = "no";
 var hideUnhide = function(){
 	$(".A,.B,.C,.D").hide();
 	$(".all").prop("checked",false);
-/*----------condtions to hide and unhide----------------*/
+/*----------conditions to hide and unhide----------------*/
 	if(sold === "yes"){
 		if(colorArray.length > 0){
 			if(brandArray.length > 0){
