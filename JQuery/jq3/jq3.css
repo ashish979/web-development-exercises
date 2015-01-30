@@ -18,11 +18,16 @@ li{
 	padding: 20px;
 }
 .content{
-	height: 569px;
-	width: 457px;
+	height: 600px;
+	width: 487px;
 	background-color: white;
 	padding: 10px;
 	float: left;
+}
+.content div{
+	display: inline-block;
+	float: left;
+	margin: 5px;
 }
 .yellow,.red,.blue,.green{
 	width: 80px;

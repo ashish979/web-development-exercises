@@ -15,8 +15,7 @@ var hideUnhide = function(){
 					}
 				}
 			}
-			else
-			{
+			else{
 				for (var j = 0; j < colorArray.length; j++) {
 					$(".sold." + colorArray[j]).show();
 				}
@@ -28,8 +27,7 @@ var hideUnhide = function(){
 					$(".sold." + brandArray[j]).show();
 				}
 			}
-			else
-			{
+			else{
 				$(".sold").show();
 			}
 		}
@@ -43,8 +41,7 @@ var hideUnhide = function(){
 					}
 				}
 			}
-			else
-			{
+			else{
 				for (var j = 0; j < colorArray.length; j++) {
 					$("." + colorArray[j]).show();
 				}
@@ -69,6 +66,9 @@ $(document).ready(function(){
 			colorArray = [];
 			brandArray = [];
 			sold = "no";
+		}
+		else{
+			$(".A,.B,.C,.D").hide();
 		}
 	});
 	$('input:not(.all)').click(function(){

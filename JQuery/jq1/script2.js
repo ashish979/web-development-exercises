@@ -73,6 +73,7 @@ $(function(){
 			}
 	}).sortable({
 			items:"li",
+			cancel:"li",
 			sort: function() {
 	        $( this ).removeClass( "ui-state-default" );
 	      }
