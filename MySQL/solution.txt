@@ -1,0 +1,3 @@
+mysql> select h.contact_id,count(h.contact_id) as No_of_issues from helpdesk_tickets h group by contact_id;
+
+mysql> select h.contact_id,count(h.contact_id) as No_of_issues from helpdesk_tickets h join issues i where h.issue_id=i.id and i.status_id NOT IN(3) group by contact_id;

@@ -1,0 +1,67 @@
+mysql> ALTER TABLE char_test CONVERT TO CHARACTER SET latin1;
+Query OK, 0 rows affected (0.77 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into char_test values(1,12312,"ashish","Instituição");
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from char_test;
++------+-------+--------+---------------+
+| id   | id2   | name   | string        |
++------+-------+--------+---------------+
+|    1 | 12312 | ashish | Instituição   |
++------+-------+--------+---------------+
+1 row in set (0.00 sec)
+
+mysql> ALTER TABLE char_test CONVERT TO CHARACTER SET utf8;
+Query OK, 1 row affected (0.74 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql> select * from char_test;
++------+-------+--------+---------------+
+| id   | id2   | name   | string        |
++------+-------+--------+---------------+
+|    1 | 12312 | ashish | Instituição   |
++------+-------+--------+---------------+
+1 row in set (0.00 sec)
+
+mysql> show full columns from char_test;
++--------+-------------+-----------------+------+-----+---------+-------+---------------------------------+---------+
+| Field  | Type        | Collation       | Null | Key | Default | Extra | Privileges                      | Comment |
++--------+-------------+-----------------+------+-----+---------+-------+---------------------------------+---------+
+| id     | int(5)      | NULL            | YES  |     | NULL    |       | select,insert,update,references |         |
+| id2    | int(5)      | NULL            | YES  |     | NULL    |       | select,insert,update,references |         |
+| name   | varchar(15) | utf8_general_ci | YES  |     | NULL    |       | select,insert,update,references |         |
+| string | varchar(20) | utf8_general_ci | YES  |     | NULL    |       | select,insert,update,references |         |
++--------+-------------+-----------------+------+-----+---------+-------+---------------------------------+---------+
+4 rows in set (0.00 sec)
+
+mysql> insert into char_test values(2,"1234","ashish","תשיש");
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into char_test values(3,4324,"ashish","阿希什");
+Query OK, 1 row affected (0.03 sec)
+
+mysql> select * from char_test;
++------+-------+--------+---------------+
+| id   | id2   | name   | string        |
++------+-------+--------+---------------+
+|    1 | 12312 | ashish | Instituição   |
+|    2 |  1234 | ashish | תשיש          |
+|    3 |  4324 | ashish | 阿希什        |
++------+-------+--------+---------------+
+3 rows in set (0.00 sec)
+
+mysql> ALTER TABLE char_test CONVERT TO CHARACTER SET latin1;
+Query OK, 3 rows affected, 2 warnings (0.90 sec)
+Records: 3  Duplicates: 0  Warnings: 2
+
+mysql> select * from char_test;
++------+-------+--------+---------------+
+| id   | id2   | name   | string        |
++------+-------+--------+---------------+
+|    1 | 12312 | ashish | Instituição   |
+|    2 |  1234 | ashish | ????          |
+|    3 |  4324 | ashish | ???           |
++------+-------+--------+---------------+
+3 rows in set (0.00 sec)

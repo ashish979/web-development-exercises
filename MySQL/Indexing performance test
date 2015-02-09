@@ -1,0 +1,30 @@
+mysql> show index from index_test;
+Empty set (0.00 sec)
+
+mysql> select number from index_test where name = "1999995310ashis";
++------------+
+| number     |
++------------+
+| 1999995310 |
++------------+
+1 row in set (2.22 sec)
+
+mysql> alter table index_test add index(name);
+Query OK, 0 rows affected (24.63 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> show index from index_test;
++------------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| Table      | Non_unique | Key_name | Seq_in_index | Column_name | Collation | Cardinality | Sub_part | Packed | Null | Index_type | Comment | Index_comment |
++------------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+| index_test |          1 | name     |            1 | name        | A         |     4955564 |     NULL | NULL   | YES  | BTREE      |         |               |
++------------+------------+----------+--------------+-------------+-----------+-------------+----------+--------+------+------------+---------+---------------+
+1 row in set (0.00 sec)
+
+mysql> select number from index_test where name = "1999995310ashis";
++------------+
+| number     |
++------------+
+| 1999995310 |
++------------+
+1 row in set (0.00 sec)
