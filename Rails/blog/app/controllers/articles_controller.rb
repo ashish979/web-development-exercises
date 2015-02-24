@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+ before_action :confirm_loggin_in
  
 	def index
 		@articles = Article.all

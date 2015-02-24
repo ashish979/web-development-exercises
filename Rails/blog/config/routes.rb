@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
 
+  #match 'login', to: 'users#login', :via [:post]
   get 'articles/new'
+  get 'signup', to: 'users#new'
 
+  resources :users do
+    collection do
+      get 'login'
+      post 'attempt_login'
+      get 'admin'
+      get 'logout'
+      get 'show'
+      get 'modify'
+    end
+  end
   resources :articles do
      member do
       get 'delete'
@@ -9,7 +21,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  root 'welcome#index'
+  root 'users#login'
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
