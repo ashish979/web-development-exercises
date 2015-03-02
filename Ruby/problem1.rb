@@ -69,7 +69,6 @@ class Galaxy
 
   def remove_credits(str)
     return str.slice(0,str.index('Credits'))
-  end
 
   def display
     puts @metal
@@ -77,6 +76,7 @@ class Galaxy
     puts @question
   end
 
+  end
   def to_roman(str)
     sum = 0
     str = str.split(" ")
