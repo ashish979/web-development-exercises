@@ -1,2 +1,3 @@
-# exercises
-These are the solutions to the exercises given at payu.
+# Exercises
+
+Solution to the pratice problems I have been working on.
