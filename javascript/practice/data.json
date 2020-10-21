@@ -1,0 +1,278 @@
+{
+  "type": "GROUP",
+  "name": "ROOT",
+  "id": 0,
+  "children": [
+    {
+      "type": "EVENT_TYPE",
+      "name": "American Football",
+      "id": "6423",
+      "children": [
+        {
+          "type": "EVENT",
+          "name": "NCAAF Championship",
+          "id": "28293460",
+          "countryCode": "",
+          "children": [
+            {
+              "type": "MARKET",
+              "name": "Winner 2019-20",
+              "id": "1.160709307",
+              "exchangeId": "1",
+              "marketType": "TOURNAMENT_WINNER",
+              "marketStartTime": "2019-08-31T16:00:00.000Z",
+              "numberOfWinners": 1
+            }
+          ]
+        },
+        {
+          "type": "EVENT",
+          "name": "NFL Season 2019/20",
+          "id": "29113020",
+          "countryCode": "GB",
+          "children": [
+            {
+              "type": "MARKET",
+              "name": "AFC Conference Winner",
+              "id": "1.154528235",
+              "exchangeId": "1",
+              "marketType": "SPECIAL",
+              "marketStartTime": "2019-09-05T00:20:00.000Z",
+              "numberOfWinners": 1
+            },
+            {
+              "type": "MARKET",
+              "name": "NFC Conference Winner",
+              "id": "1.154528236",
+              "exchangeId": "1",
+              "marketType": "SPECIAL",
+              "marketStartTime": "2019-09-05T00:20:00.000Z",
+              "numberOfWinners": 1
+            },
+            {
+              "type": "MARKET",
+              "name": "Super Bowl Winner",
+              "id": "1.154528999",
+              "exchangeId": "1",
+              "marketType": "TOURNAMENT_WINNER",
+              "marketStartTime": "2019-09-05T00:20:00.000Z",
+              "numberOfWinners": 1
+            }
+          ]
+        },
+        {
+          "type": "GROUP",
+          "name": "CFL",
+          "id": "1576436472",
+          "children": [
+            {
+              "type": "EVENT",
+              "name": "Edmonton Eskimos @ Calgary Stampeders",
+              "id": "29390116",
+              "countryCode": "GB",
+              "children": [
+                {
+                  "type": "MARKET",
+                  "name": "Handicap",
+                  "id": "1.160934268",
+                  "exchangeId": "1",
+                  "marketType": "HANDICAP",
+                  "marketStartTime": "2019-08-03T23:00:00.000Z",
+                  "numberOfWinners": ""
+                },
+                {
+                  "type": "MARKET",
+                  "name": "Moneyline",
+                  "id": "1.160934672",
+                  "exchangeId": "1",
+                  "marketType": "MATCH_ODDS",
+                  "marketStartTime": "2019-08-03T23:00:00.000Z",
+                  "numberOfWinners": 1
+                },
+                {
+                  "type": "MARKET",
+                  "name": "Total Points",
+                  "id": "1.160934470",
+                  "exchangeId": "1",
+                  "marketType": "COMBINED_TOTAL",
+                  "marketStartTime": "2019-08-03T23:00:00.000Z",
+                  "numberOfWinners": ""
+                }
+              ]
+            },
+            {
+              "type": "EVENT",
+              "name": "Hamilton Tigercats @ Saskatchewan",
+              "id": "29390114",
+              "countryCode": "GB",
+              "children": [
+                {
+                  "type": "MARKET",
+                  "name": "Hamilton Tigercats +1.5pts",
+                  "id": "1.160933893",
+                  "exchangeId": "1",
+                  "marketType": "HANDICAP",
+                  "marketStartTime": "2019-08-02T01:30:00.000Z",
+                  "numberOfWinners": 1
+                },
+                {
+                  "type": "MARKET",
+                  "name": "Hamilton Tigercats +10.5pts",
+                  "id": "1.160934006",
+                  "exchangeId": "1",
+                  "marketType": "HANDICAP",
+                  "marketStartTime": "2019-08-02T01:30:00.000Z",
+                  "numberOfWinners": 1
+                },
+                {
+                  "type": "MARKET",
+                  "name": "Total Points",
+                  "id": "1.160933789",
+                  "exchangeId": "1",
+                  "marketType": "COMBINED_TOTAL",
+                  "marketStartTime": "2019-08-02T01:30:00.000Z",
+                  "numberOfWinners": ""
+                }
+              ]
+            },
+            {
+              "type": "EVENT",
+              "name": "Ottawa Redblacks @ Montreal Alouettes",
+              "id": "29390115",
+              "countryCode": "GB",
+              "children": [
+                {
+                  "type": "MARKET",
+                  "name": "Handicap",
+                  "id": "1.160917969",
+                  "exchangeId": "1",
+                  "marketType": "HANDICAP",
+                  "marketStartTime": "2019-08-02T23:00:00.000Z",
+                  "numberOfWinners": ""
+                },
+                {
+                  "type": "MARKET",
+                  "name": "Moneyline",
+                  "id": "1.160915634",
+                  "exchangeId": "1",
+                  "marketType": "MATCH_ODDS",
+                  "marketStartTime": "2019-08-02T23:00:00.000Z",
+                  "numberOfWinners": 1
+                },
+                {
+                  "type": "MARKET",
+                  "name": "Total Points",
+                  "id": "1.160918171",
+                  "exchangeId": "1",
+                  "marketType": "COMBINED_TOTAL",
+                  "marketStartTime": "2019-08-02T23:00:00.000Z",
+                  "numberOfWinners": ""
+                }
+              ]
+            },
+            {
+              "type": "EVENT",
+              "name": "Winnipeg Blue Bombers @ Toronto Argonauts",
+              "id": "29390113",
+              "countryCode": "GB",
+              "children": [
+                {
+                  "type": "MARKET",
+                  "name": "Handicap",
+                  "id": "1.160918472",
+                  "exchangeId": "1",
+                  "marketType": "HANDICAP",
+                  "marketStartTime": "2019-08-01T23:00:00.000Z",
+                  "numberOfWinners": ""
+                },
+                {
+                  "type": "MARKET",
+                  "name": "Moneyline",
+                  "id": "1.160918975",
+                  "exchangeId": "1",
+                  "marketType": "MATCH_ODDS",
+                  "marketStartTime": "2019-08-01T23:00:00.000Z",
+                  "numberOfWinners": 1
+                },
+                {
+                  "type": "MARKET",
+                  "name": "Winnipeg Blue Bombers +9.5pts",
+                  "id": "1.160919709",
+                  "exchangeId": "1",
+                  "marketType": "HANDICAP",
+                  "marketStartTime": "2019-08-01T23:00:00.000Z",
+                  "numberOfWinners": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "GROUP",
+          "name": "NFL Matches",
+          "id": "1576148167",
+          "children": [
+            {
+              "type": "EVENT",
+              "name": "Denver Broncos @ Atlanta Falcons",
+              "id": "29379828",
+              "countryCode": "GB",
+              "children": [
+                {
+                  "type": "MARKET",
+                  "name": "Atlanta Falcons +3.0pts",
+                  "id": "1.160909495",
+                  "exchangeId": "1",
+                  "marketType": "HANDICAP",
+                  "marketStartTime": "2019-08-02T00:00:00.000Z",
+                  "numberOfWinners": 1
+                },
+                {
+                  "type": "MARKET",
+                  "name": "Atlanta Falcons +9.5pts",
+                  "id": "1.160909493",
+                  "exchangeId": "1",
+                  "marketType": "HANDICAP",
+                  "marketStartTime": "2019-08-02T00:00:00.000Z",
+                  "numberOfWinners": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "EVENT_TYPE",
+      "name": "Athletics",
+      "id": "3988",
+      "children": [
+        {
+          "type": "GROUP",
+          "name": "Tokyo 2020",
+          "id": "1576026204",
+          "children": [
+            {
+              "type": "EVENT",
+              "name": "Mens 100m",
+              "id": "27901552",
+              "countryCode": "GB",
+              "children": [
+                {
+                  "type": "MARKET",
+                  "name": "Outright Winner",
+                  "id": "1.126411949",
+                  "exchangeId": "1",
+                  "marketType": "WINNER",
+                  "marketStartTime": "2020-08-14T11:00:00.000Z",
+                  "numberOfWinners": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
